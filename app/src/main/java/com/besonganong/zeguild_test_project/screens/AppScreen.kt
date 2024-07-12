@@ -16,13 +16,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.sharp.Close
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Scaffold
@@ -71,15 +69,7 @@ fun AppScreen(
     var showBottomSheet by remember { mutableStateOf(false) }
 
     Scaffold(
-        floatingActionButton = {
-            ExtendedFloatingActionButton(
-                text = { Text("Show bottom sheet") },
-                icon = { Icon(Icons.Filled.Add, contentDescription = "") },
-                onClick = {
-                    showBottomSheet = true
-                }
-            )
-        }
+
     ) {
         // Screen content
 
@@ -204,8 +194,6 @@ fun SheetContent(
 
 
     val swipeState = rememberSwipeableCardState()
-    val scope = rememberCoroutineScope()
-
     // Track direction of a swipe
     var swipeDirectionState by remember { mutableStateOf(Direction.Down) }
 
@@ -258,7 +246,7 @@ fun SheetContent(
 
         Spacer(modifier = modifier.height(10.dp))
 
-        // Todo: Add animation to this image
+        // Add animation to this image
         Image(
             painter = painterResource(id = imageRes),
             contentDescription = "",
