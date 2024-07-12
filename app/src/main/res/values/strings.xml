@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Zeguild-test-project</string>
+    <string name="mangue">Mangue</string>
+    <string name="fraise">Fraise</string>
+    <string name="fraise_gariguette">Fraise\ngariguette</string>
+    <string name="melon_charentais">Melon\nCharentais</string>
+</resources>
